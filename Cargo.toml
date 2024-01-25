@@ -1,0 +1,29 @@
+[package]
+edition = "2021"
+name = "rodio-audio-backend"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
+napi-derive = { version = "2.14.2", features = ["compat-mode"] }
+napi = { version = "2.14.2", default-features = false, features = [
+    "napi4",
+    "async",
+    "compat-mode",
+    "tokio_rt",
+] }
+rodio = { git = "https://github.com/Moosync/rodio", branch = "master", features = [
+    "symphonia-all",
+] }
+tokio = "1.35.1"
+
+
+[build-dependencies]
+napi-build = "2.0.1"
+
+[profile.release]
+lto = true
+strip = "symbols"
