@@ -40,7 +40,8 @@
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "universal": "napi universal",
-    "version": "napi version"
+    "version": "napi version",
+    "install": "npm run build"
   },
   "packageManager": "yarn@4.0.2",
   "dependencies": {
