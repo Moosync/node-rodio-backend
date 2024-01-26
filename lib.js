@@ -82,7 +82,7 @@ class RodioBackend extends events_1.default {
         });
     }
     setVolume(volume) {
-        return this.sendCommandAsync("SET_VOLUME", volume.toString());
+        return this.sendCommandAsync("SET_VOLUME", Math.max(Math.min(volume, 1), 0).toString());
     }
     getVolume() {
         return this.sendCommandAsync("GET_VOLUME");

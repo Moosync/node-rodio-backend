@@ -60,7 +60,7 @@ export class RodioBackend extends EventEmitter {
     }
 
     public setVolume(volume: number) {
-        return this.sendCommandAsync("SET_VOLUME", volume.toString())
+        return this.sendCommandAsync("SET_VOLUME", Math.max(Math.min(volume, 1), 0).toString())
     }
 
     public getVolume() {
