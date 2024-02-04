@@ -778,8 +778,8 @@ checksum = "c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f"
 
 [[package]]
 name = "rodio"
-version = "0.17.3"
-source = "git+https://github.com/Moosync/rodio?branch=master#ae870b2f33c01f7af0a65a6efa01582f7da6d909"
+version = "0.17.3-dev"
+source = "git+https://github.com/Moosync/rodio?branch=master#99237739cf705b8d43d4740b5f86127e73764c39"
 dependencies = [
  "claxon",
  "cpal",
